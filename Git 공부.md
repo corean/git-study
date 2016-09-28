@@ -3,6 +3,7 @@ Git
 
 * 링크
 	* 누구나 쉽게 이해할 수 있는 Git 에 입문 : [https://backlogtool.com/git-guide/kr/](https://backlogtool.com/git-guide/kr/ "누구나 쉽게 이해할 수 있는 Git 에 입문")
+	
 		> 여기가 가장 배우기 쉬움.
 		> 찾아보기를 참고하여 운영하면 될 듯.
 	* 개인 테스트용 프로젝트: [https://corean.backlogtool.com/dashboard](https://corean.backlogtool.com/dashboard)
@@ -92,22 +93,22 @@ Git
 		* 밀어넣기
 	* Tag
 		* 일반 태그 (Lightweight Tag) - 이름정보만 
-			* git tag <tag-name>
+			* `git tag <tag-name>`
 		* 주석 태그 (Anootated Tag) - 상세정보 포함
-			* git tag -a <tag-name> 
-			* git tag -am <comment> <tag-name> 
-		* git tag //태그목록
-		* git tag -n //태그목록과 주석내용
-		* git tag -n <tag-name> //태그삭제
-		* git checkout <tag-name> //바로 특정상태로 되돌리기
+			* `git tag -a <tag-name>`
+			* `git tag -am <comment> <tag-name>` 
+		* `git tag` 태그목록
+		* `git tag -n` 태그목록과 주석내용
+		* `git tag -n <tag-name>` 태그삭제
+		* `git checkout <tag-name>` 바로 특정상태로 되돌리기
 	* Remote
 		* 사용법
 			* `git remote add origin <원격저장소 주소>` 원격저장소 주소 등록
 			* `git push orgin master` 원격저장소 <master>브랜치로 밀어냄.
 			* `git pull` 원격 저장소에 맞춰 갱신. 내부적으로 fetch후 merge
 			* 초기화
-				* git fetch origin
-				* git reset --hard origin/mast
+				* `git fetch origin`
+				* `git reset --hard origin/master`
 	* Diff
 		* 병합 충돌(conflicts)시 직접 수정후
 		* `git diff <원래 브랜치> <비교대상 브랜치>`
@@ -119,15 +120,14 @@ Git
 		* 변경한 인덱스의 상태를 원래대로 되돌리고 싶을때 --mixed
 		* 최근의 커밋을 완전히 버리고 이전상태로 복구 --hard
 		* 실수로 reset 했을경우
-			* git reset --hard ORIG_HEAD
+			* `git reset --hard ORIG_HEAD`
 	* Cherry-pick
 		* 다른 브랜치의 특정 커밋을 복사하여 현재 브랜치로 가져옴
-		* git cheery-pick e4ec
+		* `git cheery-pick e4ec`
 	* Log
 		* 기본적으로 log가 아니라 식별자 알아보기
-		* git log --decorate : 태그정보를 포함한 이력을 확인
+		* `git log --decorate` 태그정보를 포함한 이력을 확인
 	* Reflog - HEAD의 이동 내역
 	* Clean - 관리대상이 아닌 파일 삭제  
 	* Tip
 		*  git reset --hard HEAD~ : commit 취소
-		*  
