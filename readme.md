@@ -23,6 +23,9 @@ Git
 		* commit한 이후 push는 안한 상태
 		* 등록되지 않은 파일은 commit 되지 않는다.
 	* Checkout
+		* 사용법
+			* `git checkout <브랜치명>/<태크명>`
+			* `git checokut -b <새브랜치> <기존브랜치>` 새로운 브랜치를 만들면서 입장합니다.
 		* 해당 브랜치 입장
 		* `git checkout --` 커밋전 파일의 변경내용을 취소하고 이전 커밋으로 되돌림
 	* HEAD
@@ -41,6 +44,7 @@ Git
 			*  `git branch bugFix` (만들고) / `git checkout bugFix` (bugFix로 갈아탐)
 			*  `git checkout -b bugFix` bugfix 브랜치를 만들고 갈아탐`
 			*  `git checkout -b release-0.90 development` evelopment 브랜치로부터 만듦`
+			*  `git branch -m <기존브랜치> <새로운브랜치>` 기존브랜치를 새로운 브랜치로 변경합니다. -M 옵션을 사용하면 이미 있는 브랜치라도 덮어씁니다.
 		*  통합 브랜치: Master Branch
 		*  토픽 브랜치: Feater Branch
 		*  [성공적인 Git 브랜칭 모델](http://nvie.com/posts/a-successful-git-branching-model/ "성공적인 Git 브랜칭 모델")
@@ -51,7 +55,8 @@ Git
 	* 통합
 		* Merge
 			* 사용법
-				* `git checkout master`
+				* `git merge <브랜치>` <브랜치>를 현재 브랜치로 합침.
+				*  `git checkout master`
 				* `git merge --no-ff release-0.9.0` release 브랜치를 merge. no-ff는 히스토리를 명시적으로 만듦
 			* FF(Fast Forward) Merge: 분기된 branch만 변경사항이 있을때
 				* ex. Master -> BugFix -> Master
@@ -64,6 +69,8 @@ Git
 				* 해당 브랜치의 커밋 전체를 통합한 커밋 추가
 				* 토픽브랜치 안의 커밋을 한꺼번에 모아 통합 브랜치에 병합할때 사용 
 		*  Rebase
+			* 사용법
+				* `git rebase <브랜치>` <브랜치>를 현재 브랜치에 적용합니다.
 			* 이력은 단순해지지만, 토픽 브랜치의 commit 이력이 변경됨.
 			* 토픽 브랜치가 그대로 통합 브랜치의 끝(HEAD)에 얹혀지는 스타일.
 			* 각각의 commit에서 충돌내용을 수정할 필요가 있음.
@@ -127,6 +134,7 @@ Git
 	* Log
 		* 기본적으로 log가 아니라 식별자 알아보기
 		* `git log --decorate` 태그정보를 포함한 이력을 확인
+		* -1이나 -2의 옵션을 출력 로그의 갯수를 지정할수 있음
 	* Reflog - HEAD의 이동 내역
 	* Clean - 관리대상이 아닌 파일 삭제  
 	* Tip
