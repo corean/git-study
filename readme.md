@@ -17,7 +17,7 @@ Git
 			* line 1: 변경내역 요약
 			* line 2: 공란
 			* line 3: 변경이유
-		* `git commit --ammend` 가장 최근 커밋내용에 내용 수정 (설명뿐만 아니라, **파일도 추가/수정** 가능하다.)
+		* `git commit --amend` 가장 최근 커밋내용에 내용 수정 (설명뿐만 아니라, **파일도 추가/수정** 가능하다.)
 		* `git checkout -- <파일명>` 로컬의 변경내용을 변경 전 HEAD로 되돌림추가한 내용과 변경내용은 남아있음.(commit만 안한 상태)
 	* Stage (=Index)
 		* commit한 이후 push는 안한 상태
