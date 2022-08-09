@@ -116,6 +116,9 @@ Git
 			* 초기화
 				* `git fetch origin`
 				* `git reset --hard origin/master`
+		* 일반적인 용어
+			* origin : 로컬 저장소에 대응하는 원격 저장소 주소를 가르키는 remote
+			* upstream : 원격 저장소가 Fork 했던 저장소. 부모 저장소.
 	* Diff
 		* 병합 충돌(conflicts)시 직접 수정후
 		* `git diff <원래 브랜치> <비교대상 브랜치>`
